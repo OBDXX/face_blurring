@@ -1,3 +1,2 @@
 pandas
 opencv-python
-subprocess
