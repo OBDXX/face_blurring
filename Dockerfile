@@ -14,16 +14,13 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Clone your face-blurring project repository
-RUN git clone https://github.com/yourusername/your-face-blurring-project.git /app
+RUN git clone https://github.com/OBDXX/face_blurring.git
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /face_blurring
 
 # Install Python dependencies
-RUN pip install -r requirements.txt
-
-# Copy your face-blurring script into the container
-COPY blur_faces.py /app/blur_faces.py
+RUN pip install -r req.txt
 
 # Define the entry point for running the blurring script
 CMD ["python", "blur_faces.py"]
