@@ -35,7 +35,7 @@ def process_folder(input_folder, output_folder):
             print(f"Processed {filename}")
 
 if __name__ == "__main__":
-    input_folder = "input_images"  # Replace with the path to your folder containing images
-    output_folder = "output_images"  # Replace with the path where you want to save images with blurred faces
+    input_folder = "~/Desktop/pictures"  # Replace with the path to your folder containing images
+    output_folder = "~/Desktop/output_images"  # Replace with the path where you want to save images with blurred faces
 
     process_folder(input_folder, output_folder)

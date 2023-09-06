@@ -12,7 +12,7 @@ output_dir = "output_images"
 os.makedirs(output_dir, exist_ok=True)
 
 # Run the Docker container to process images
-# subprocess.run(["docker", "run", "-v", f"{os.path.abspath(input_dir)}:/app/input_images","-v", f"{os.path.abspath(output_dir)}:/app/output_images", "face-blurring-app"])
+subprocess.run(["docker", "run", "-v", f"{os.path.abspath(input_dir)}:/app/input_images","-v", f"{os.path.abspath(output_dir)}:/app/output_images", "face-blurring-app"])
 
 print("Face blurring completed!")
 
