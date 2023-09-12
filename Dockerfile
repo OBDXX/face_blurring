@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
     libsm6 \
     libxext6 \
     libxrender-dev \
+    ffmpeg \
     && rm -rf /var/lib/apt/lists/*
 
 # Clone your face-blurring project repository
@@ -20,10 +21,9 @@ RUN git clone https://github.com/OBDXX/face_blurring.git
 WORKDIR /face_blurring
 
 # Install Python dependencies
-# RUN pip install -r req.txt
+RUN pip install -r req.txt
 
-RUN pwd
 
 # Define the entry point for running the blurring script
-# CMD ["python", "blur_faces.py"]
+CMD ["python", "main.py"]
 
