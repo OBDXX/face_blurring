@@ -2,7 +2,7 @@ import cv2
 import os
 
 from face_blurring import create_parser
-
+print("Face blurring completed!")
 parser = create_parser()
 args = parser.parse_args()
 
@@ -38,7 +38,7 @@ def process_folder(input_folder, output_folder):
         if filename.endswith(('.jpg', '.png', '.jpeg')):
             input_path = os.path.join(input_folder, filename)
             output_path = os.path.join(output_folder, filename)
-            blur_faces(input_folder, output_path)
+            blur_faces(args.input, args.output)
             print(f"Processed {filename}")
 
 if __name__ == "__main__":
@@ -47,4 +47,3 @@ if __name__ == "__main__":
 
     process_folder(input_folder, output_folder)
 
-print("Face blurring completed!")
